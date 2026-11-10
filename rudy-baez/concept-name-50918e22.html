@@ -565,14 +565,14 @@ function fitStage(wrapper, w, h) {
   return s;
 }
 
-const REPORT = {"id":"rmwa7ryg4","kind":"playable","appName":"","conceptName":"Concept Name","date":"2026-11-10","appIcon":"","langs":["en"],"i18n":{},"slides":[{"id":"ssbeq6qd","type":"title","variant":null,"fields":{},"images":{},"fit":{}},{"id":"s3ptkz31","type":"intro","variant":null,"fields":{},"images":{},"fit":{}},{"id":"sr8nwpa3","type":"data","variant":"pp","fields":{},"images":{},"fit":{}},{"id":"schwqxdj","type":"concept","variant":"l","fields":{"sub":"Iteration 1 - Multiple Interactions"},"images":{},"fit":{}},{"id":"snj43cdp","type":"flow","variant":"p3","fields":{"iter":"Iteration 1"},"images":{},"fit":{}},{"id":"sgots6kw","type":"iteration","variant":"l","fields":{"sub":"Iteration 2 - Single Interaction"},"images":{},"fit":{}},{"id":"sa30q7mk","type":"orient","variant":"a","fields":{"c0":"Ultra-Wide","desc":"The playable supports portrait, landscape and ultra-wide. The experience rotates with the device without losing progress."},"images":{},"fit":{}},{"id":"shyhu05f","type":"feedback","variant":null,"fields":{"surveyUrl":"https://docs.google.com/forms/d/e/1FAIpQLSdg4axZbWOA0zaOBsEEMsq6q9CA7AdUWeSUftbSTNjF6pt7Dw/viewform"},"images":{},"fit":{}},{"id":"scbj41qo","type":"assets","variant":null,"fields":{},"images":{},"fit":{}}],"sync":null};
+const REPORT = {"id":"rmwa7ryg4","kind":"playable","appName":"","conceptName":"Concept Name","date":"2026-11-10","appIcon":"","langs":["en"],"i18n":{},"slides":[{"id":"ssbeq6qd","type":"title","variant":null,"fields":{},"images":{},"fit":{}},{"id":"s3ptkz31","type":"intro","variant":null,"fields":{},"images":{},"fit":{}},{"id":"sr8nwpa3","type":"data","variant":"pp","fields":{},"images":{},"fit":{}},{"id":"schwqxdj","type":"concept","variant":"l","fields":{"sub":"Iteration 1 - Multiple Interactions"},"images":{},"fit":{}},{"id":"snj43cdp","type":"flow","variant":"p3","fields":{"iter":"Iteration 1"},"images":{},"fit":{}},{"id":"sgots6kw","type":"iteration","variant":"l","fields":{"sub":"Iteration 2 - Single Interaction"},"images":{},"fit":{}},{"id":"sa30q7mk","type":"orient","variant":"a","fields":{"c0":"Ultra-Wide","desc":"The playable supports portrait, landscape and ultra-wide. The experience rotates with the device without losing progress."},"images":{},"fit":{}},{"id":"shyhu05f","type":"feedback","variant":null,"fields":{"surveyUrl":"https://docs.google.com/forms/d/e/1FAIpQLSdg4axZbWOA0zaOBsEEMsq6q9CA7AdUWeSUftbSTNjF6pt7Dw/viewform"},"images":{},"fit":{}},{"id":"scbj41qo","type":"assets","variant":null,"fields":{},"images":{},"fit":{}}],"sync":{"key":"nU_GgRTOC27fPtTkYB","form":{"e":{"action":"entry.869801520","text":"entry.1818656335","slide":"entry.1570248037","author":"entry.572966919","key":"entry.1046181049","extra":"entry.603146663"},"url":"https://docs.google.com/forms/d/e/1FAIpQLSfBvlsQEuutmOtkOJ_JTKM2appr4RMD0j5sFnDTgd9nA42oiw/formResponse"},"read":"https://script.google.com/a/macros/moloco.com/s/AKfycbwwU-wry1Vw4elNo_WobLb0AfA1R-M5z_Mjau1xqMfH4IHSAX_7RHwqa3DZJL-X1z9g/exec"}};
 (function () {
   document.documentElement.style.setProperty('--wm', 'url(' + ASSETS.watermark + ')');
   document.title = (REPORT.appName ? REPORT.appName + ' – ' : '') + (REPORT.kind === 'storyboard' ? 'Storyboard' : 'Concept Outline') + ' – ' + (REPORT.conceptName || '');
   const $ = id => document.getElementById(id);
   const KEY = 'moloco-outline-' + REPORT.id;
   const LS = { get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
-  const COMMENTS_ON = false;   
+  const COMMENTS_ON = true;
   const SYNC = COMMENTS_ON && REPORT.sync && REPORT.sync.key && REPORT.sync.form && REPORT.sync.form.url ? REPORT.sync : null;   
   let CLIENT = LS.get('moloco-outline-client', ''); if (!CLIENT) { CLIENT = 'c' + Math.random().toString(36).slice(2, 12); LS.set('moloco-outline-client', CLIENT); }
   const st = { i: 0, lang: LS.get(KEY + '-lang', null), drawer: false, ann: LS.get(KEY + '-ann', []), rating: LS.get(KEY + '-rating', {}), ratings: [], sync: SYNC ? 'connecting' : 'local', draft: '' };
@@ -763,4 +763,4 @@ const REPORT = {"id":"rmwa7ryg4","kind":"playable","appName":"","conceptName":"C
 </script>
 </body>
 </html>
-<!-- moloco-publish 1794299985726 -->
+<!-- moloco-publish 1794300047401 -->
